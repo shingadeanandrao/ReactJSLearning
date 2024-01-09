@@ -23,6 +23,8 @@ import HTMLEditors from "./HTML_Tutorial/HTMLEditors";
 import HTMLBasics from "./HTML_Tutorial/HTMLBasics";
 import CSSSelectors from "./CSS_Tutorial/CSSSelectors";
 import JSIntro from "./JS_Tutorial/JSIntro";
+import AboutUs from "../TopNav/AboutUs";
+import ContactUs from "../TopNav/ContactUs";
 
 
 const CodeMind = () => {
@@ -30,8 +32,9 @@ const CodeMind = () => {
   return (
     <>
       <Router>
-        <nav class="navbar navbar-expand-lg navigationBar">
-          <div class="container-fluid">
+
+        <nav class="navbar navbar-dark bg-primary">
+          {/* <!-- Navbar content --> */}
           <NavLink className="navbar-brand" to="/">
           <img
               src={logo}
@@ -42,8 +45,17 @@ const CodeMind = () => {
             />
             </NavLink>
             <NavLink className="navbar-brand" to="/">
-              <span style={{color:'#ddb9cf'}}>CODEMIND_TECHNOLOGY</span>
+              <span style={{color:'greenyellow'}}>CODEMIND_TECHNOLOGY</span>
             </NavLink>
+            <NavLink className="navbar-brand" to="/aboutus">
+              About Us
+            </NavLink>
+            <NavLink className="navbar-brand" to="/contactus">
+              Contact Us
+            </NavLink>
+        </nav>
+        <nav class="navbar navbar-expand-sm navigationBar">
+          <div class="container-fluid">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="navbar-brand">
                 <NavLink
@@ -75,6 +87,8 @@ const CodeMind = () => {
           </div>
         </nav>
         <Routes>
+              <Route exact path="/aboutus" element={<AboutUs />}></Route>
+              <Route exact path="/contactus" element={<ContactUs />}></Route>
               <Route exact path="/" element={<HomePage />}></Route>
               <Route exact path="/HTML" element={<HTML />}></Route>
               <Route exact path="/CSS" element={<CSSLang />}></Route>
