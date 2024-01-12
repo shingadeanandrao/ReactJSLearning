@@ -22,16 +22,19 @@
   margin-right: 100px;
 }
 
-.form{
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
   
-  background-color: greenyellow;
-  width: 300px;
+}
+.form-group{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: greenyellow;
+}
 
-}
-input{
-  margin-top: 50px;
-  margin-left: 50px;
-  padding: 15px;
-}
 
